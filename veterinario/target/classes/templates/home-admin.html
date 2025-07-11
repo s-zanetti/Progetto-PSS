@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Area Admin - Studio Veterinario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-4">Benvenuto Amministratore</h1>
+
+    <div class="row justify-content-center">
+        
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Clienti</h5>
+                    <p class="card-text">Gestisci i dati dei clienti</p>
+                    <a href="/clienti/admin" class="btn btn-primary w-100">Gestione Clienti</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Animali</h5>
+                    <p class="card-text">Gestisci gli animali registrati</p>
+                    <a href="/animali/admin" class="btn btn-primary w-100">Gestione Animali</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Appuntamenti</h5>
+                    <p class="card-text">Gestisci gli appuntamenti</p>
+                    <a href="/admin" class="btn btn-primary w-100">Gestione Appuntamenti</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/logout" class="btn btn-outline-danger">Logout</a>
+    </div>
+
+</div>
+
+</body>
+</html>
