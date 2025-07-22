@@ -40,7 +40,14 @@ public class ClienteViewController {
     							  @RequestParam String cognome,
                                   @RequestParam String email,
                                   @RequestParam String password,
-                                  @RequestParam String telefono) {
+                                  @RequestParam String telefono,
+                                  RedirectAttributes redirectAttributes) {
+    	if (repo.existsByEmail(email)) {
+            redirectAttributes.addFlashAttribute("erroreEmail", "Email già registrata, riprova.");
+            return "redirect:/clienti/admin";
+        }
+    	
+    	
         Cliente nuovo = new Cliente();
         nuovo.setNome(nome);
         nuovo.setCognome(cognome);
